@@ -1,0 +1,258 @@
+@charset 'UTF-8';
+/* ==========================================================================
+   Default settings
+   ========================================================================== */
+
+
+html, input, select, textarea, button {
+    font:14px/1.428 Arial, "Geneva CY", sans-serif;
+    color:#222;
+}
+html,body {
+    height: 100%;
+    overflow: hidden;
+}
+a {
+  color: #0088cc;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #005580;
+  text-decoration: underline;
+}
+a:visited {}
+a:link {-webkit-tap-highlight-color: #fcd700;} 
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/* ==========================================================================
+   Global styles
+   ========================================================================== */
+.btn {
+    
+}
+.btn:hover, .btn:focus {
+    
+}
+.btn:active, .btnActive {
+    
+}
+/*default styles*/
+input[type="text"],input[type="password"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="month"],input[type="week"],input[type="email"],input[type="number"],input[type="search"],input[type="tel"],input[type="time"],input[type="url"],input[type="color"]
+,textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*hover styles*/
+input[type="text"]:hover,input[type="password"]:hover,input[type="date"]:hover,input[type="datetime"]:hover,input[type="datetime-local"]:hover,input[type="month"]:hover,input[type="week"]:hover,input[type="email"]:hover,input[type="number"]:hover,input[type="search"]:hover,input[type="tel"]:hover,input[type="time"]:hover,input[type="url"]:hover,input[type="color"]:hover
+,textarea:hover {
+    
+}
+/*focus styles*/
+input[type="text"]:focus,input[type="password"]:focus,input[type="date"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="email"]:focus,input[type="number"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="time"]:focus,input[type="url"]:focus,input[type="color"]:focus
+,textarea:focus {
+    
+}
+/*disables, readonly styles*/
+input[type="text"][disabled], input[type="text"]:disabled, input[type="text"][readonly], fieldset[disabled] input[type="text"],input[type="password"][disabled], input[type="password"]:disabled, input[type="password"][readonly], fieldset[disabled] input[type="password"],input[type="date"][disabled], input[type="date"]:disabled, input[type="date"][readonly], fieldset[disabled] input[type="date"],input[type="datetime"][disabled], input[type="datetime"]:disabled, input[type="datetime"][readonly], fieldset[disabled] input[type="datetime"],input[type="datetime-local"][disabled], input[type="datetime-local"]:disabled, input[type="datetime-local"][readonly], fieldset[disabled] input[type="datetime-local"],input[type="month"][disabled], input[type="month"]:disabled, input[type="month"][readonly], fieldset[disabled] input[type="month"],input[type="week"][disabled], input[type="week"]:disabled, input[type="week"][readonly], fieldset[disabled] input[type="week"],input[type="email"][disabled], input[type="email"]:disabled, input[type="email"][readonly], fieldset[disabled] input[type="email"],input[type="number"][disabled], input[type="number"]:disabled, input[type="number"][readonly], fieldset[disabled] input[type="number"],input[type="search"][disabled], input[type="search"]:disabled, input[type="search"][readonly], fieldset[disabled] input[type="search"],input[type="tel"][disabled], input[type="tel"]:disabled, input[type="tel"][readonly], fieldset[disabled] input[type="tel"],input[type="time"][disabled], input[type="time"]:disabled, input[type="time"][readonly], fieldset[disabled] input[type="time"],input[type="url"][disabled], input[type="url"]:disabled, input[type="url"][readonly], fieldset[disabled] input[type="url"],input[type="color"][disabled], input[type="color"]:disabled, input[type="color"][readonly], fieldset[disabled] input[type="color"]
+,textarea[disabled], textarea:disabled, textarea[readonly], fieldset[disabled] textarea {
+    
+}
+
+textarea {
+    padding:4px;
+    resize: vertical;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+select {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*from sanitize*/
+/*select{-moz-appearance:none;-webkit-appearance:none}
+select::-ms-expand{display:none}
+select::-ms-value{color:currentColor}*/
+
+.valid {
+    
+}
+.invalid {
+    
+}
+hr {
+  border-color: #ccc;
+}
+/* ==========================================================================
+   Site styles
+   ========================================================================== */
+#app {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #ccc;
+}
+.scene {
+  width: 100%;
+  height: 100%;
+  position: absolute;left: 0;top: 0;
+  display: none;
+  background-color: #fff;
+}
+.scene-menu {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  background: red;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.scene-body {
+  height: calc(100vh - 50px);
+  overflow: auto;
+}
+
+.anim-out .scene {
+  animation-direction: reverse !important;
+}
+.anim-fade .scene--to {
+  z-index: 1;
+  animation: fade 250ms ease-in-out;
+}
+
+.anim-slideUp .scene--to {
+  z-index: 1;
+  animation: slideUp 300ms ease-in-out;
+}
+.anim-slideDown .scene--to {
+  z-index: 1;
+  animation: slideDown 300ms ease-in-out;
+}
+.anim-slideLeft .scene--to {
+  z-index: 1;
+  animation: slideLeft 300ms ease-in-out;
+}
+.anim-slideRight .scene--to {
+  z-index: 1;
+  animation: slideRight 300ms ease-in-out;
+}
+.anim-scale .scene--to {
+  z-index: 1;
+  animation: scale 300ms ease-in-out;
+}
+.anim-scaleOut .scene--to {
+  z-index: 1;
+  animation: scaleOut 300ms ease-in-out;
+}
+
+@keyframes fade {
+  0%
+  {
+    opacity: 0;
+  }
+
+  100%
+  {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0%
+  {
+    opacity: 0;
+    transform: translate3d(0,50%,0);
+  }
+
+  100%
+  {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes slideDown {
+  0%
+  {
+    opacity: 0;
+    transform: translate3d(0,-50%,0);
+  }
+
+  100%
+  {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes slideLeft {
+  0%
+  {
+    opacity: 0;
+    transform: translate3d(-50%,0,0);
+  }
+
+  100%
+  {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes slideRight {
+  0%
+  {
+    opacity: 0;
+    transform: translate3d(50%,0,0);
+  }
+
+  100%
+  {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes scale {
+  0%
+  {
+    opacity: 0;
+    transform:scale(0.5);
+  }
+
+  100%
+  {
+    opacity: 1;
+    transform:scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  0%
+  {
+    opacity: 0;
+    transform:scale(2);
+  }
+  100%
+  {
+    opacity: 1;
+    transform:scale(1);
+  }
+}
